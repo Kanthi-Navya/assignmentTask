@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+ #for third-party-api, used local api after create and update an user 
   namespace :api do
     namespace :v1 do
       get '/third_party', to: 'third_party#index'

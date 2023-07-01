@@ -27,4 +27,38 @@ Things you may want to cover:
 
 #rails generate model User first_name:string last_name:string email:string pwd:string
 
+#added validations for user_attributes
+  validates :first_name, presence: true, length: { maximum: 50}
+  validates :last_name, presence: true, length: { maximum: 50}
+  validates :email, presence: true, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i }
+  validates :password, presence: true, length: { minimum: 6 }
 
+rails db:migrate
+rails g controller user
+
+for check urls- create
+
+
+curl -X POST -H "Content-Type: application/json" -d '{
+  "user": {
+    "first_name": "navya",
+    "last_name": "k",
+    "email": "navya@example.com",
+    "password": "password"
+  }
+}' http://localhost:3000/users
+
+update--
+
+curl -X PUT -H "Content-Type: application/json" -d '{
+  "user": {
+    "first_name": "navya",
+    "last_name": "k",
+    "email": "navya@example.com",
+    "password": "password"
+  }
+}' http://localhost:3000/users/1
+
+
+#for -third party API
+created one local api: http://localhost:3000/api/v1/third_party 
