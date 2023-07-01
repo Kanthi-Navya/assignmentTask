@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+#rails generate model User first_name:string last_name:string email:string pwd:string
+
+
