@@ -59,6 +59,13 @@ curl -X PUT -H "Content-Type: application/json" -d '{
   }
 }' http://localhost:3000/users/1
 
-
+curl -X PUT -H "Content-Type: application/json" -d '{
+  {"first_name":"navya","last_name":"Do55ecdd7","email":"johnDod9d9@4example.com","password":"password"}
+}' http://localhost:3000/users
 #for -third party API
 created one local api: http://localhost:3000/api/v1/third_party 
+
+
+
+
+# assignmentTask
