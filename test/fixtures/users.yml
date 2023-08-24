@@ -3,11 +3,15 @@
 one:
   first_name: MyString
   last_name: MyString
-  email: MyString
-  passwor: MyString
+  email: 
+  password: MyString
+  password_digest: MyString
+  date_of_birth: 2023-07-19
 
 two:
   first_name: MyString
   last_name: MyString
-  email: MyString
-  passwor: MyString
+  email: 
+  password: MyString
+  password_digest: MyString
+  date_of_birth: 2023-07-19

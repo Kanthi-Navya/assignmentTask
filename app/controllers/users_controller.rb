@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     if @user
       if @user.valid?
         user = @user.update(user_params)
+
         render json: {message: 'user updated successfully'}, status: :ok
       else
         render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
@@ -23,6 +24,7 @@ class UsersController < ApplicationController
     end
   end
 
+  private
   def set_user
     @user = User.find_by(id: params[:id])
   end
